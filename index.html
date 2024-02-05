@@ -12,6 +12,34 @@
             background-position: center;
             background-size: cover;
         }
+        .pop{
+            animation: bounce 2s  infinite linear;
+            background-color: #FE5D26;
+        }
+        .next{
+            background-color: #FE5D26;
+        }
+        @keyframes bounce {
+            0% {
+        transform: scaleX(1);
+      }
+      25% {
+        transform: scaleX(1.05);
+      }
+      50% {
+        transform: scaleX(1.2);
+        box-shadow: 2px -5px 19px 0px rgba(0,0,0,0.8);
+-webkit-box-shadow: 2px -5px 19px 0px rgba(0,0,0,0.8);
+-moz-box-shadow: 2px -5px 19px 0px rgba(0,0,0,0.8);
+      }
+      75% {
+        transform: scaleX(1.08);
+      }
+      100% {
+        transform: scaleX(1);
+      }
+}
+        }
         .pro{
             height: 150px;
         }
@@ -38,7 +66,7 @@ electrique pliable
     </p>
     <img src="Product.png" class="mx-auto" alt="poor" />
     <div class="flex justify-center align-center -mt-12">
-        <button class="bg-red-500 text-white px-16 py-3 pop rounded-lg">  
+        <button class="text-white px-16 py-3 pop rounded-lg">  
             Je craque
             </button>
     </div>
@@ -74,7 +102,7 @@ electrique pliable
                 <input type="text" placeholder="Code portal" class="bg-slate-100 h-12 pl-8 w-42 rounded-3xl codePortal" /> 
                 <input type="email" placeholder="Email" class="bg-slate-100 h-12 pl-8 w-42 rounded-3xl mail" /> 
 
-                <span class="bg-red-500 -ml-12 rounded-3xl text-white next pt-4 px-4 cursor-pointer">
+                <span class="-ml-12 rounded-3xl text-white next pt-4 px-4 cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
                       </svg>
