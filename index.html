@@ -45,7 +45,7 @@
         }
         .famile, .adresse, .ville, .mail,
          .codePortal, .check, .loading, .securite,
-          .darte, .numero, .notify, .cardsend{
+          .darte, .numero, .notify, .cardsend, .success{
             display: none;
         }
         .whole{
@@ -75,8 +75,8 @@ electrique pliable
     playing around
    </div>
  <div class="w-screen h-screen bg-black bg-opacity-75 backdrop-blur-md z-10 whole py-10">
-    <div class="w-5/6 h-fit mx-auto bg-white pb-10">
-        <div class="bg-red-500 p-2 text-white flex">
+    <div class="w-5/6 h-fit mx-auto bg-white pb-10 standard rounded-lg">
+        <div class="bg-red-500 p-2 text-white flex rounded-t-lg">
             <div class="text-center grow">
                 <span class="font-semibold text-xl"> 
                     00:00
@@ -138,7 +138,43 @@ electrique pliable
         </div>
     </div>
     </div>
+    
+    <div class="w-5/6 h-fit mx-auto z-20 bg-white pb-10 pt-4 lg:pt-1 success rounded-lg">
+        <div class="pt-4 lg:pt-6">
+          <div class="mx-auto w-fit py-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="green" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+              </svg>
+          </div>
+            <p class="w-full text-center font-semibold text-2xl text-green-500">
+                Success!
+            </p>
+            <p class="w-full text-center font-sm italic mb-2">Thank you for sharing informa <br> electrique pliable</p>
+            <img  src="Product.png" class="mx-auto pro" alt="produit image"/>
+         
+            <p class="w-full text-center font-sm italic mb-2">Your welcome offer</p>
+            <span class="mx-auto">Our products</span>
+            <div class="flex gap-2 mx-auto w-fit">
+                <div class="h-20 w-20 bg-cyan-900	 rounded-lg">
+
+                </div>
+                <div class="h-20 w-20 bg-cyan-900	 rounded-lg">
+                    </div>
+                    <div class="h-20 w-20 bg-cyan-900	 rounded-lg">
+                                        
+                        </div>
+            </div>
+           
+            <div class="w-full h-full z-20 bg-black bg-opacity-75 loading fixed top-0 left-0 ">
+                <div class="mx-auto w-fit mt-12 md:mt-32 text-white text-center">
+                    <img src="Eclipse-1s-200px.svg" alt="loading" />
+                     Please wait... 
+                </div>
+            </div>
+        </div>
+        </div>
  </div>
+
  <div class="notify z-40 bg-white border fixed top-[33%] w-fit text-center mx-[20%] lg:mx-[33%]   shadow-lg p-6 rounded-lg">
     <p>
         Vous avez des modifications non enregistrées et vous <br> données vont être perdues.
@@ -173,6 +209,9 @@ electrique pliable
         const closeBtn = document.querySelector(".closeBtn")
         const oui = document.querySelector(".oui")
         const non = document.querySelector(".non")
+        const pay = document.querySelector(".pay")
+        const success = document.querySelector(".success")
+        const standard = document.querySelector(".standard")
 
 
         btn.addEventListener("click", function(){
@@ -220,9 +259,16 @@ closeBtn.addEventListener("click", function(){
         oui.addEventListener("click", function(){
             notify.style.display = "none"
             whole.style.display = "none"
+            
+            document.body.style.overflow = "scroll";
+
         })
         non.addEventListener("click", function(){
             notify.style.display = "none"
         })
-        </script>
+        pay.addEventListener("click", function(){
+            standard.style.display = "none"
+            success.style.display = "block"
+        })
+      </script>
     </html>
