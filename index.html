@@ -68,6 +68,7 @@
          .codePortal, .check, .loading, .securite,
           .darte, .numero, .notify, .cardsend, .success{
             display: none;
+            
         }
         .whole{
             display: none;
@@ -266,8 +267,8 @@
     <div class="w-5/6 h-fit mx-auto bg-white pb-10 standard rounded-lg">
         <div class="bg-red-500 p-2 text-white text-center relative  rounded-t-lg">
             <div class="text-center">
-                <span class="font-semibold text-xl"> 
-                    00:00
+                <span class="font-semibold text-xl timer"> 
+                    
                 </span>
                 <p class="text-xs font-light">
                     minutes pour profiter de cette offre, Depechez-vous!
@@ -478,6 +479,26 @@ closeBtn.addEventListener("click", function(){
             success.style.display = "block"
     start++;
 }
-    
+function startCountdown(durationInSeconds) {
+  let timerElement = document.querySelector(".timer")
+
+  let countdown = durationInSeconds;
+  setInterval(function () {
+    let minutes = Math.floor(countdown / 60);
+    let seconds = countdown % 60;
+
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    timerElement.textContent = minutes + ':' + seconds;
+
+    if (--countdown < 0) {
+      countdown = durationInSeconds;
+    }
+  }, 1000);
+}
+
+// Set the initial duration to 5 minutes (5 minutes * 60 seconds)
+startCountdown(5 * 60);
       </script>
     </html>
