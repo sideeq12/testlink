@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=1.0, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -24,8 +24,8 @@
            height: 65vh;
         }
         .firsthead{
-            background-image: url("background.png");
-            background-position: center;
+            background-image: url("full.png");
+            background-position: bottom;
             background-size: cover;
         }
         .popx{
@@ -64,7 +64,7 @@
         .pro{
             height: 150px;
         }
-        .famile, .adresse, .ville, .mail,
+       .errorM, .famile, .adresse, .ville, .mail,
          .codePortal, .check, .loading, .securite,
           .darte, .numero, .notify, .cardsend, .success{
             display: none;
@@ -78,13 +78,20 @@
         form input:focus{
             border: none;
         }
+        @media (max-width: 8000px) {
+            .firsthead{
+            background-image: url("background.png");
+            background-position: center;
+            background-size: cover;
+            }
+        }
     </style>
    <div class="w-screen h-screen firsthead pt-20 lg:pt-2 relative">
     <div class="flex justify-center align-center forx">
     <img src="Pour 1€.png" class="mx-auto" height="" alt="poor" /> </div>
     <div class="flex justify-center align-center msm">
         <p class="w-fit mx-auto text-center text-white italic mb-4">
-            recevrez votre trottinette <br>
+            recevez votre trottinette <br>
     electrique pliable
         </p>
     </div>
@@ -94,7 +101,7 @@
     </div>
     
     <div class="flex justify-center align-center popx">
-        <button class="text-white px-16 py-3 pop rounded-lg">  
+        <button class="text-white font-bold px-16 py-3 pop rounded-lg">  
             Je craque
             </button>
     </div>
@@ -104,28 +111,29 @@
    </div>
  <div class="w-screen h-screen bg-black bg-opacity-75 backdrop-blur-md z-10 whole py-10">
     <div class="w-5/6 h-fit mx-auto bg-white pb-10 standard rounded-lg">
-        <div class="bg-red-500 p-2 text-white flex rounded-t-lg">
-            <div class="text-center grow">
+        <div class="bg-red-500 p-2 text-white text-center relative  rounded-t-lg">
+            <div class="text-center">
                 <span class="font-semibold text-xl"> 
                     00:00
                 </span>
-                <p class="text-sm">
-                    minutes pour profiter de cette offre, depechez vous!
+                <p class="text-xs font-light">
+                    minutes pour profiter de cette offre, Depechez-vous!
                 </p>
             </div>
-            <div class="text-right flex-none w-1/6 -mr-6 cursor-pointer closeBtn"> <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <div class=" w-fit absolute top-4 right-3  cursor-pointer closeBtn"> <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
                 <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
               </svg></div>
     </div>
     <div class="pt-4 lg:pt-6">
         <img src="/Pour 1€.png" class="mx-auto" alt="POur image"/>
-        <p class="w-full text-center font-sm italic mb-2">recevrez votre trottinette <br> electrique pliable</p>
+        <p class="w-full text-center font-sm italic mb-2">recevez votre trottinette <br> electrique pliable</p>
         <img  src="Product.png" class="mx-auto pro" alt="produit image"/>
-        <p class="w-full text-center font-semibold">
-            Jus Quel est votre ?
-        </p>
-        <form class="my-6">
-            <div class="data prenom w-full flex justify-center align-center userdata">
+        <form class="my-6 w-fit mx-auto ">
+            <p class="w-fit font-semibold mb-2">
+                Jus Quel est votre ?
+            </p>
+            <span class="text-red-500 text-xs mb-2 errorM">veuillez sélectionner les termes et conditions</span>
+            <div class="data prenom w-fit flex justify-center align-center userdata">
                 <input type="text" placeholder="Prenom" class="bg-slate-100 h-12 pl-8 w-42 rounded-3xl name" /> 
                 <input type="text" placeholder="Nom de famille" class="bg-slate-100 h-12 pl-8 w-42 rounded-3xl famile" />
                 <input type="text" placeholder="Adresse" class="bg-slate-100 h-12 pl-8 w-42 rounded-3xl adresse" /> 
@@ -152,8 +160,8 @@
                    pay now
                 </span>
             </div>
-            <div class="mx-auto w-56 lg:w-fit check mt-3">
-                <input type="checkbox" class="mr-2"/>
+            <div class="w-52 lg:mx-auto lg:w-60 check mt-3">
+                <input type="checkbox" class="mr-2 mybox"/>
                  je suis dacord avec les <span class="font-semibold">Terms et condition</span>  
                  et la <span class="font-semibold">Politiques de confidentialite</span> 
             </div>
@@ -183,11 +191,11 @@
             <p class="w-full text-center font-semibold text-4xl text-green-700">
                 Success!
             </p>
-            <p class="w-full text-center font-sm italic mb-4">Thank you for sharing informa <br> electrique pliable</p>
+            <p class="w-full text-center font-sm italic mb-4">Merci de nous avoir choisi</p>
             <img  src="Product.png" class="mx-auto pro" alt="produit image"/>
          
-            <p class="w-full text-center font-sm italic my-3">Your welcome offer</p>
-            <span class="mx-auto  ">Our products</span>
+            <p class="w-full text-center font-sm italic my-3">Votre offre de bienvenue</p>
+            <span class="mx-auto  ">Notre produit</span>
             <div class="flex gap-2 mx-auto mt-3 w-fit">
                 <div class="h-20 w-20 bg-cyan-900	 rounded-lg">
 
@@ -233,6 +241,8 @@
         const codePortal = document.querySelector(".codePortal")
         const mail = document.querySelector(".mail")
         const check = document.querySelector(".check")
+        const mybox = document.querySelector(".mybox")
+        const errorM = document.querySelector(".errorM")
         const loading = document.querySelector(".loading")
         const numero = document.querySelector(".numero")
         const darte = document.querySelector(".darte")
@@ -276,11 +286,16 @@
                check.style.display = "block";
                start++;
             }else if(start == 5 ){
-                loading.style.display = "block"
+                if(!mybox.checked){
+                    errorM.style.display = "block"
+                }else{
+                    loading.style.display = "block"
                 setTimeout(move, 1000);
+                }
             }
         })
         function move() {
+            errorM.style.display = "none"
             loading.style.display = "none"
                 userdata.style.display = "none";
                 check.style.display = "none";
