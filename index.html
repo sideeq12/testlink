@@ -287,7 +287,7 @@
                 Jus Quel est votre ?
             </p>
             <span class="text-red-500 text-xs mb-2 errorM">veuillez sélectionner les termes et conditions</span>
-            <div class="data prenom w-fit flex justify-center align-center userdata">
+            <div class="data prenom w-fit flex justify-center align-center userdata md:hidden">
                 <input type="text" placeholder="Prenom" class="bg-slate-100 h-12 pl-8 w-42
                  rounded-3xl focus:outline-none name" autofocus> 
                 <input type="text" placeholder="Nom de famille" class="bg-slate-100 h-12 pl-8 w-42 rounded-3xl famile" autofocus>
@@ -385,6 +385,7 @@
 
     </body>
     <script>
+        let width = screen.width;
         let start = 0
         const btn = document.querySelector(".pop")
         const whole = document.querySelector(".whole")
@@ -448,8 +449,11 @@
 
         btn.addEventListener("click", function(){
             whole.style.display = "block"
+            console.log("the width", width)
+            if(width < 769){
+                standard.style.transform ="translateY(40%)"
+            }
             name.focus();
-            standard.style.transform ="translateY(40%)"
             document.body.style.overflow = "hidden";
         })
         
