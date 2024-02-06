@@ -317,10 +317,12 @@
             </div>
             <div class="data  w-fit mx-auto  cardsend">
               <div class=" bg-slate-100 p-3 rounded-lg w-fit"> 
-                <input type="text" placeholder="1234 1234 1234 1234" class="bg-white-100 h-12 pl-4 w-56 rounded-t-lg " />
+                <input type="text" placeholder="1234 1234 1234 1234" 
+                 id="cardNumber" maxlength="19" oninput="formatCardNumber(event)" class="bg-white-100 h-12 pl-4 w-56 focus:outline-none rounded-t-lg " />
                 <div class="grid grid-cols-2 gap-1 mt-1">
-                    <input type="text" placeholder="MM/YY" class="bg-white h-12 pl-4 w-28 rounded-b-lg " />
-                <input type="text" placeholder="CVC" class="bg-white-100 h-12 pl-4 w-28 rounded-b-lg " />
+                    <input type="text" id="cardExpiration" 
+                    maxlength="5" oninput="formatCardExpiration(event)" placeholder="MM/YY" class="bg-white h-12 focus:outline-none pl-4 w-28 rounded-b-lg " />
+                <input type="password" id="cvc" placeholder="CVC" maxlength="3" pattern="\d{3}" class="bg-white-100 focus:outline-none h-12 pl-4 w-28 rounded-b-lg " />
                 </div> 
               </div>
                 <br>
@@ -443,6 +445,9 @@
         const setBack = document.querySelector(".setBack")
         const setNext = document.querySelector(".setNext")
 
+        document.getElementById('cvc').addEventListener('input', function(event) {
+    this.value = this.value.replace(/\D/g, '');
+        })
         document.addEventListener('keydown', function(event) {
                 if (event.key === 'Enter') { 
                     if(start == 0){
@@ -591,6 +596,29 @@ function startCountdown(durationInSeconds) {
 }
 
 // Set the initial duration to 5 minutes (5 minutes * 60 seconds)
+
+
+
+function formatCardNumber(event) {
+  let input = event.target;
+  let value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+  value = value.substring(0, 16); // Limit to 16 digits
+
+  let formattedValue = '';
+  for (let i = 0; i < value.length; i += 4) {
+    formattedValue += value.substr(i, 4) + ' ';
+  }
+
+  input.value = formattedValue.trim();
+}
+
+    function formatCardExpiration(event) {
+      let input = event.target;
+      let value = input.value.replace(/\D/g, ''); // Remove non-numeric characters
+      value = value.substring(0, 4); // Limit to 4 digits
+      value = value.replace(/(\d{2})(\d{0,2})/, '$1/$2'); // Add "/" after the first 2 digits
+      input.value = value;
+    }
 
       </script>
     </html>
