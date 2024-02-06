@@ -471,33 +471,43 @@
         })
         document.addEventListener('keydown', function(event) {
                 if (event.key === 'Enter') { 
-                    if(start == 0){
-                name.style.display = "none"
-            family.style.display = "block"
+               if(width > 768){
+               if(mybox.checked){
+                loading.style.display = "block"
+                setTimeout(move, 2000);
+                start = 5;
+               }else{
+                termsCheck.style.display = "block"
+               }
+            } else  if(start == 0){
+            family.style.display = "none";
+            codePortal.style.display = "block"
+            codePortal.focus();
               start++;
             }else if (start == 1){
-                family.style.display = "none"
-            adresse.style.display = "block"
+            codePortal.style.display = "none"
+            ville.style.display = "block"
+            ville.focus()
             start++;
             }else if (start == 2){
-                adresse.style.display = "none"
-            ville.style.display = "block"
+                ville.style.display = "none"
+               adresse.style.display = "block"
+               adresse.focus()
             start++;
             }else if (start == 3){
-                ville.style.display = "none"
-               codePortal.style.display = "block"
+                adresse.style.display = "none"
+               mail.style.display = "block"
+               mail.focus()
+               checkx.style.display = "block"
             start++;
             }else if (start == 4){
-                codePortal.style.display = "none"
-               mail.style.display = "block";
-               check.style.display = "block";
-               start++;
-            }else if(start == 5 ){
-                if(!mybox.checked){
-                    errorM.style.display = "block"
+              if(mycheckx.checked){
+              mail.style.display = "none"
+              checkx.style.display = "none"
+              loading.style.display = "block"
+                setTimeout(move, 2000);
                 }else{
-                    loading.style.display = "block"
-                setTimeout(move, 1000);
+                 termsCheck.style.display = "block"
                 }
             }
                 }
@@ -562,8 +572,6 @@
                  termsCheck.style.display = "block"
                 }
             }
-         
-       
         })
         function move() {
             loading.style.display = "none"
