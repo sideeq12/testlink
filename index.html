@@ -411,13 +411,18 @@
         const success = document.querySelector(".success")
         const standard = document.querySelector(".standard")
 
+        document.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    alert('Enter key pressed! This is your pop-up.');
+                }
+            })
 
         btn.addEventListener("click", function(){
             whole.style.display = "block"
             name.focus();
             document.body.style.overflow = "hidden";
-
         })
+        
         next.addEventListener("click", ()=>{
             if(start == 0){
                 name.style.display = "none"
