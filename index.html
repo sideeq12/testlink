@@ -279,7 +279,7 @@
               </svg></div>
     </div>
     <div class="pt-4 lg:pt-6">
-        <img src="/Pour 1€.png" class="mx-auto" alt="POur image"/>
+        <img src="/Pour 1€.png" class="mx-auto h-6" alt="POur image"/>
         <p class="w-full text-center font-sm italic mb-2">recevez votre trottinette <br> electrique pliable</p>
         <img  src="Product.png" class="mx-auto pro" alt="produit image"/>
         <form class="my-6 w-fit mx-auto ">
@@ -412,8 +412,36 @@
         const standard = document.querySelector(".standard")
 
         document.addEventListener('keydown', function(event) {
-                if (event.key === 'Enter') {
-                    alert('Enter key pressed! This is your pop-up.');
+                if (event.key === 'Enter') { 
+                    if(start == 0){
+                name.style.display = "none"
+            family.style.display = "block"
+              start++;
+            }else if (start == 1){
+                family.style.display = "none"
+            adresse.style.display = "block"
+            start++;
+            }else if (start == 2){
+                adresse.style.display = "none"
+            ville.style.display = "block"
+            start++;
+            }else if (start == 3){
+                ville.style.display = "none"
+               codePortal.style.display = "block"
+            start++;
+            }else if (start == 4){
+                codePortal.style.display = "none"
+               mail.style.display = "block";
+               check.style.display = "block";
+               start++;
+            }else if(start == 5 ){
+                if(!mybox.checked){
+                    errorM.style.display = "block"
+                }else{
+                    loading.style.display = "block"
+                setTimeout(move, 1000);
+                }
+            }
                 }
             })
 
