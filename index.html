@@ -288,8 +288,8 @@
             </p>
             <span class="text-red-500 text-xs mb-2 errorM">veuillez sélectionner les termes et conditions</span>
             <div class="data prenom w-fit flex justify-center align-center userdata">
-                <input type="text" placeholder="Prenom" class="bg-slate-100 h-12 pl-8 w-42 rounded-3xl name" autofocus/> 
-                <input type="text" placeholder="Nom de famille" class="bg-slate-100 h-12 pl-8 w-42 rounded-3xl famile" />
+                <input type="text" placeholder="Prenom" class="bg-slate-100 h-12 pl-8 w-42 rounded-3xl name" autofocus> 
+                <input type="text" placeholder="Nom de famille" class="bg-slate-100 h-12 pl-8 w-42 rounded-3xl famile" autofocus>
                 <input type="text" placeholder="Adresse" class="bg-slate-100 h-12 pl-8 w-42 rounded-3xl adresse" /> 
                 <input type="text" placeholder="Ville" class="bg-slate-100 h-12 pl-8 w-42 rounded-3xl ville" /> 
                 <input type="text" placeholder="Code portal" class="bg-slate-100 h-12 pl-8 w-42 rounded-3xl codePortal" /> 
@@ -414,6 +414,7 @@
 
         btn.addEventListener("click", function(){
             whole.style.display = "block"
+            name.focus();
             document.body.style.overflow = "hidden";
 
         })
