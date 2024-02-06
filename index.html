@@ -74,6 +74,14 @@
             top: 0;
             left: 0;
         }
+        .visa{
+            background-image: url("Visa-Logo.svg");
+            background-size: contain;
+        }
+        .master{
+            background-image: url("/mastercardlogo.jpg");
+            background-size: cover;
+        }
         form input:focus{
             border: none;
         }
@@ -317,13 +325,26 @@
             </div>
             <div class="data  w-fit mx-auto  cardsend">
               <div class=" bg-slate-100 p-3 rounded-lg w-fit"> 
-                <input type="text" placeholder="1234 1234 1234 1234" 
-                 id="cardNumber" maxlength="19" oninput="formatCardNumber(event)" class="bg-white-100 h-12 pl-4 w-56 focus:outline-none rounded-t-lg " />
+                <div class="flex w-64 border gap-2 bg-white  rounded-t-lg ">
+                    <input type="text" placeholder="1234 1234 1234 1234" 
+                 id="cardNumber" maxlength="19" oninput="formatCardNumber(event)"
+                  class="bg-white-100 h-12 pl-4 w-44 focus:outline-none rounded-t-lg " />
+                  <div class="flex gap-1 justify-center align-center pt-3">
+                    <img src="Visa-Logo.png" class=" h-6 w-8 border-2 rounded-md bg-white p-1">
+                    <img src="mastercardlogo.jpg" class=" h-6 w-8 border-2 rounded-md">
+                  </div>
+                </div>
                 <div class="grid grid-cols-2 gap-1 mt-1">
                     <input type="text" id="cardExpiration" 
-                    maxlength="5" oninput="formatCardExpiration(event)" placeholder="MM/YY" class="bg-white h-12 focus:outline-none pl-4 w-28 rounded-b-lg " />
-                <input type="password" id="cvc" placeholder="CVC" maxlength="3" pattern="\d{3}" class="bg-white-100 focus:outline-none h-12 pl-4 w-28 rounded-b-lg " />
-                </div> 
+                    maxlength="5" oninput="formatCardExpiration(event)" placeholder="MM/YY" class="bg-white h-12 focus:outline-none pl-4 w-32 rounded-b-lg " />
+               <div class="flex bg-white  rounded-b-lg">
+                <input type="password" id="cvc" placeholder="CVC" maxlength="3" pattern="\d{3}"
+                 class="bg-white-100 focus:outline-none h-12 pl-4 w-20 rounded-b-lg " />
+                <div class="flex gap-1 justify-center align-center bg-white pt-3 pr-1">
+                    <img src="cvv.svg" class=" h-6 w-8 border-2 rounded-md">
+                  </div>
+               </div>
+            </div> 
               </div>
                 <br>
                 <span class="bg-green-500 px-24 mx-auto py-3  rounded-lg text-white pay cursor-pointer ">
