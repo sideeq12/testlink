@@ -65,7 +65,7 @@
             height: 150px;
         }
         .loading, .securite, .checkx, .termsCheck,
-          .darte, .numero, .notify, .cardsend, .succes{
+          .darte, .numero, .notify, .cardsend, .success{
             display: none;
         }
         .whole{
@@ -328,10 +328,10 @@
                 <div class="flex w-64 border gap-2 bg-white  rounded-t-lg ">
                     <input type="text" placeholder="1234 1234 1234 1234" 
                  id="cardNumber" maxlength="19" oninput="formatCardNumber(event)"
-                  class="bg-white-100 h-12 pl-4 w-44 cadNum focus:outline-none rounded-t-lg " />
-                  <div class="flex gap-1 justify-center align-center pt-3">
-                    <img src="Visa-Logo.png" class=" h-6 w-8 border-2 rounded-md bg-white p-1">
-                    <img src="mastercardlogo.jpg" class=" h-6 w-8 border-2 rounded-md">
+                  class="bg-white-100 h-12 pl-4 w-44 focus:outline-none rounded-t-lg " />
+                  <div class="flex gap-1 justify-center align-center pt-4">
+                    <img src="Visa-Logo.png" class=" h-4 w-6 border-2 rounded-sm bg-white p-1">
+                    <img src="mastercardlogo.jpg" class=" h-4 w-6 border rounded-sm">
                   </div>
                 </div>
                 <div class="grid grid-cols-2 gap-1 mt-1">
@@ -340,8 +340,8 @@
                <div class="flex bg-white  rounded-b-lg">
                 <input type="password" id="cvc" placeholder="CVC" maxlength="3" pattern="\d{3}"
                  class="bg-white-100 focus:outline-none h-12 pl-4 w-20 rounded-b-lg " />
-                <div class="flex gap-1 justify-center align-center bg-white pt-3 pr-1">
-                    <img src="cvv.svg" class=" h-6 w-8 border-2 rounded-md">
+                <div class="flex gap-1 justify-center align-center bg-white pt-4 pr-1">
+                    <img src="cvv.svg" class=" h-4 w-6 border-2 rounded-sm">
                   </div>
                </div>
             </div> 
@@ -463,7 +463,6 @@
         const checkx= document.querySelector(".checkx")
         const termsCheck = document.querySelector(".termsCheck")
         const mycheckx = document.querySelector(".mycheckx")
-        const cadNum = document.querySelector(".cadNum")
         const setBack = document.querySelector(".setBack")
         const setNext = document.querySelector(".setNext")
 
@@ -583,7 +582,6 @@
             userdata.style.display = "none";
             check.style.display = "none";
             cardsend.style.display = "block"
-            cadNum.focus()
         //  if(width <= 768){
         //     start++;
         //  }
