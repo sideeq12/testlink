@@ -37,8 +37,16 @@
             animation: bounce 1s  infinite linear;
             background-color: green;
         }
-        .next{
-            background-color: #FE5D26;
+        .arrCov{
+            position: absolute;
+           bottom: 25%;
+           left: 28%;
+        }
+        .arrowImg{
+            /* transform: rotateY(180deg);
+            transform: rotateZ(20deg); */
+            transform: rotate(90deg);
+            /* animation: bounce 1s  infinite; */
         }
         @keyframes bounce {
             0% {
@@ -91,6 +99,12 @@
             background-position: bottom;
             background-size: cover;
             } */ 
+
+            .arrCov{
+            position: absolute;
+           bottom: 25%;
+           left: -10%;
+        }
             .adresse, .ville, .mail,
          .codePortal, .check, .loading, .securite,
           .darte, .numero, .notify, .cardsend, .success{
@@ -108,9 +122,13 @@
     electrique pliable
         </p>
     </div>
+
     
     <div class="flex justify-center align-center prodx">
         <img src="Product.png" class="prod" height="100%"  alt="poor" />
+    </div>
+    <div class="border-2 w-fit h-fit mx-auto  arrCov ">
+        <img src="/Arrow 02.svg" class="arrowImg h-16 w-32 " alt="icon" />
     </div>
     
     <div class="flex justify-center align-center popx">
