@@ -527,7 +527,13 @@
             whole.style.display = "block"
             startCountdown(5 * 60);
             if(width < 769){
-                height < 897 ? standard.style.transform ="translateY(70px)" : standard.style.transform ="translateY(25px)" 
+                if( height < 897){
+                    alert("this", height)
+                    standard.style.transform ="translateY(70px)" 
+            }else {
+                alert("this", height)
+                standard.style.transform ="translateY(25px)" 
+            } 
             }
             family.focus();
             document.body.style.overflow = "hidden";
