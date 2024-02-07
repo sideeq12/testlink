@@ -583,6 +583,13 @@
                adresse.focus()
             start++;
             }else if (start == 3){
+                if(width < 769){
+                if( height < 821){
+                    standard.style.transform ="translateY(5px)" 
+            }else {
+                standard.style.transform ="translateY(60%)" 
+            } 
+            }
                 adresse.style.display = "none"
                mail.style.display = "block"
                mail.focus()
