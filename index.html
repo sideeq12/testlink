@@ -519,10 +519,17 @@
             start++;
             }else if (start == 3){
                 adresse.style.display = "none"
-                pro.style.display = "none"
+                // pro.style.display = "none"
                mail.style.display = "block"
                mail.focus()
                checkx.style.display = "block"
+               if(width < 769){
+                if( height < 821){
+                    standard.style.transform ="translateY(5px)" 
+            }else {
+                standard.style.transform ="translateY(10%)" 
+            } 
+            }
             start++;
             }else if (start == 4){
               if(mycheckx.checked){
