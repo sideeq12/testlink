@@ -487,7 +487,7 @@
         const mycheckx = document.querySelector(".mycheckx")
         const setBack = document.querySelector(".setBack")
         const setNext = document.querySelector(".setNext")
-        const resp= document.querySelector(".resp")
+        const pro= document.querySelector(".pro")
 
         document.getElementById('cvc').addEventListener('input', function(event) {
     this.value = this.value.replace(/\D/g, '');
@@ -519,7 +519,7 @@
             start++;
             }else if (start == 3){
                 adresse.style.display = "none"
-                resp.style.display = "none"
+                pro.style.display = "none"
                mail.style.display = "block"
                mail.focus()
                checkx.style.display = "block"
