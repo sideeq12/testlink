@@ -524,6 +524,7 @@
                mail.style.display = "block"
                mail.focus()
                checkx.style.display = "block"
+               mail.blur();
                if(width < 769){
                 if( height < 821){
                     standard.style.transform ="translateY(5px)" 
@@ -617,6 +618,14 @@
             userdata.style.display = "none";
             check.style.display = "none";
             cardsend.style.display = "block"
+            if(width < 769){
+                if( height < 821){
+                    standard.style.transform ="translateY(10px)" 
+            }else {
+                standard.style.transform ="translateY(70%)" 
+            } 
+            }
+            
         //  if(width <= 768){
         //     start++;
         //  }
