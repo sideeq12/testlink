@@ -425,7 +425,7 @@
     </div>
     </div>
 
- <div class="notify z-40 border fixed top-[33%]  bg-slate-200  border-black
+ <div class="notify z-60 -l border fixed top-[33%]  bg-slate-200  border-black
  w-fit text-center mx-[20%] lg:mx-[33%] 
    shadow-lg p-6 rounded-lg">
     <p>
@@ -433,7 +433,7 @@
          Voulez-vous vraiment quitter?
     </p>
      <div class="flex justify-center align-center gap-3 mt-3">
-        <button class="bg-gray-200 px-6 rounded-lg  py-2 oui">Oui</button>
+        <button class="bg-gray-400 px-6 rounded-lg  py-2 oui">Oui</button>
          <button class="bg-green-700 px-6 rounded-lg  py-2 non text-white">Non</button>
      </div>
  </div>
@@ -583,13 +583,7 @@
                adresse.focus()
             start++;
             }else if (start == 3){
-                if(width < 769){
-                if( height < 821){
-                    standard.style.transform ="translateY(1px)" 
-            }else {
-                standard.style.transform ="translateY(10%)" 
-            } 
-            }
+
                 adresse.style.display = "none"
                mail.style.display = "block"
                mail.focus()
@@ -616,7 +610,14 @@
         //  }
 }
     closeBtn.addEventListener("click", function(){
-            notify.style.display = "block"
+        notify.style.display = "block"
+        if(width < 769){
+                if( height < 821){
+                    notify.style.transform ="translateY(10px)" 
+            }else {
+                notify.style.transform ="translateY(70%)" 
+            } 
+            }
         })
         oui.addEventListener("click", function(){
             notify.style.display = "none"
