@@ -315,7 +315,7 @@
     <div class="pt-4 lg:pt-6">
         <img src="/Pour 1€.png" class="mx-auto h-10 md:h-12" alt="POur image"/>
         <p class="w-full text-center font-sm italic mb-2">recevez votre trottinette <br> electrique pliable</p>
-        <img  src="Product.png" class="mx-auto pro" alt="produit image"/>
+        <img  src="Product.png" class="mx-auto pro resp" alt="produit image"/>
         <form class="md:my-6 w-fit md:w-full mx-auto flex flex-col -mt-2 md:mt-1">
             <div class="data prenom bg-slate-100 md:bg-white w-fit md:w-2/3 mx-auto gap-2 md:gap-4 flex justify-center align-center 
             userdata md:grid  md:grid md:grid-cols-2 border-2 border-blue-500 rounded-3xl md:border-none">
@@ -329,7 +329,7 @@
                 rounded-3xl focus:outline-none rounded-3xl adresse" /> 
                 <input type="email" placeholder="Adress Email" class="bg-slate-100 h-12 pl-4 md:pl-8 w-44 md:w-full
                 rounded-3xl focus:outline-none rounded-3xl mail" />
-                <div class="w-52 flex  justify-center align-center lg:mx-auto md:w-full  check mt-3">
+                <div class="w-52 flex  justify-center align-center hidden md:block lg:mx-auto md:w-full  check mt-3">
                     <input type="checkbox" class="mr-2 mybox"/>
                      <span class="md:mt-2">jai plus de 18 ans et j'accepte les conditions</span>
                 </div>
@@ -487,6 +487,7 @@
         const mycheckx = document.querySelector(".mycheckx")
         const setBack = document.querySelector(".setBack")
         const setNext = document.querySelector(".setNext")
+        const resp= document.querySelector(".resp")
 
         document.getElementById('cvc').addEventListener('input', function(event) {
     this.value = this.value.replace(/\D/g, '');
@@ -518,6 +519,7 @@
             start++;
             }else if (start == 3){
                 adresse.style.display = "none"
+                resp.style.display = "none"
                mail.style.display = "block"
                mail.focus()
                checkx.style.display = "block"
