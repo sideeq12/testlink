@@ -115,7 +115,7 @@
     animation: bouncex 1s infinite;
   }
    .notify {
-                margin-bottom: -20vh;
+                margin-bottom: -30vh;
             }
  
         @media (max-width: 768px) {
@@ -664,6 +664,13 @@
 }
     closeBtn.addEventListener("click", function(){
         notify.style.display = "block"
+        if(width < 769){
+            mail.focus();
+            family.focus();
+            codePortal.focus();
+            adresse.focus();
+            ville.focus()
+        }
         })
         oui.addEventListener("click", function(){
             notify.style.display = "none"
