@@ -121,7 +121,7 @@
             background-size: cover;
             } */ 
             .termsCheck {
-                margin-bottom: 10vh;
+                margin-bottom: 12vh;
             }
             .prenom{
                 border : 2px solid #FF521B;
@@ -561,6 +561,9 @@
                 setTimeout(move, 2000);
                 }else{
                  termsCheck.style.display = "block"
+                 if(width < 769 ){
+                    mail.focus()
+                 }
                 }
             }
                 }
