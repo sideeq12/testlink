@@ -97,13 +97,31 @@
         form input:focus{
             border: none;
         }
+        @keyframes bouncex {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .arrCov {
+    display: inline-block;
+    animation: bouncex 1s infinite;
+  }
         @media (max-width: 768px) {
             /* .firsthead{
             background-image: url("full.png");
             background-position: bottom;
             background-size: cover;
             } */ 
-
+            .prenom{
+                border : 2px solid #FF521B;
+            }
             .arrCov{
             position: absolute;
            bottom: 22%;
