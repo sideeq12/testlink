@@ -402,6 +402,20 @@
         </div>
     </div>
     </div>   
+  
+ </div>
+   <div class="notify z-60 -l border absolute top-[33%]  bg-slate-200  border-black
+    w-fit text-center mx-[20%] lg:mx-[33%] 
+      shadow-lg p-6 rounded-lg">
+       <p>
+           Vous avez des modifications non enregistrées et vous <br> données vont être perdues.
+            Voulez-vous vraiment quitter?
+       </p>
+        <div class="flex justify-center align-center gap-3 mt-3">
+           <button class="bg-gray-400 px-6 rounded-lg  py-2 oui">Oui</button>
+            <button class="bg-green-700 px-6 rounded-lg  py-2 non text-white">Non</button>
+        </div>
+    </div>
     <div class="termsCheck z-60 border absolute top-[20%] md:top-[33%]  bg-slate-200  border-black font-light
     w-fit text-center mx-[10%] lg:mx-[33%] 
       shadow-lg p-6 rounded-lg">
@@ -416,7 +430,6 @@
             <button class="bg-green-700 px-6 rounded-lg  py-2 setNext text-white">Oui</button>
         </div>
     </div>
- </div>
  <div class="w-5/6 h-fit mx-auto z-40 bg-white pb-10 pt-4 lg:pt-1 success text-center  rounded-lg">  
     <div class="pt-4 lg:pt-6 relative">
         <a class="absolute top-3 right-3" href="">
@@ -456,20 +469,6 @@
         </div>
     </div>
     </div>
-
- <div class="notify z-60 -l border absolute top-[33%]  bg-slate-200  border-black
- w-fit text-center mx-[20%] lg:mx-[33%] 
-   shadow-lg p-6 rounded-lg">
-    <p>
-        Vous avez des modifications non enregistrées et vous <br> données vont être perdues.
-         Voulez-vous vraiment quitter?
-    </p>
-     <div class="flex justify-center align-center gap-3 mt-3">
-        <button class="bg-gray-400 px-6 rounded-lg  py-2 oui">Oui</button>
-         <button class="bg-green-700 px-6 rounded-lg  py-2 non text-white">Non</button>
-     </div>
- </div>
-
  </div>
 
     </body>
@@ -556,7 +555,6 @@
               checkx.style.display = "none"
               loading.style.display = "block"
                 setTimeout(move, 2000);
-                
                 }else{
                  termsCheck.style.display = "block"
                 }
@@ -588,7 +586,7 @@
         })
         
         next.addEventListener("click", ()=>{
-            if(width > 768){
+             if(width > 768){
                if(mybox.checked){
                 loading.style.display = "block"
                 setTimeout(move, 2000);
@@ -612,11 +610,18 @@
                adresse.focus()
             start++;
             }else if (start == 3){
-
                 adresse.style.display = "none"
+                // pro.style.display = "none"
                mail.style.display = "block"
                mail.focus()
                checkx.style.display = "block"
+               if(width < 769){
+                if( height < 821){
+                    standard.style.transform ="translateY(5px)" 
+            }else {
+                standard.style.transform ="translateY(45%)" 
+            } 
+            }
             start++;
             }else if (start == 4){
               if(mycheckx.checked){
